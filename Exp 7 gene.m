@@ -1,4 +1,4 @@
-rng(1); % For reproducibility 
+%{rng(1); % For reproducibility 
 numSamples = 100; % Number of samples
 numFeatures = 5;  % Number of features
 X = rand(numSamples, numFeatures); % Random features
@@ -54,7 +54,7 @@ function score = svmFitnessFunction(X, Y, individual)
     CVModel = crossval(SVMModel);
     score = 1 - kfoldLoss(CVModel); % Fitness as accuracy
 end
-
+}%
  output program
 bestIndividual = [1 0 1 0 1]; % Example best individual
 accuracy = 0.85; % Example accuracy
