@@ -1,4 +1,5 @@
-%{rng(1); % For reproducibility 
+%{
+rng(1); % For reproducibility 
 numSamples = 100; % Number of samples
 numFeatures = 5;  % Number of features
 X = rand(numSamples, numFeatures); % Random features
