@@ -1,3 +1,9 @@
+rng(1); % For reproducibility 
+numSamples = 100; % Number of samples
+numFeatures = 5;  % Number of features
+X = rand(numSamples, numFeatures); % Random features
+Y = randi([0, 1], numSamples, 1); % Random binary labels
+save('synthetic_dataset.mat', 'X', 'Y'); % Save dataset
 data = load('synthetic_dataset.mat'); % Load the dataset
 X = data.X; % Feature matrix
 Y = data.Y; % Labels
